@@ -60,8 +60,11 @@ function showMessage() {
     }, 800); // fade out 800ms rồi đổi chữ
 }
 
-setInterval(showMessage, 4000);
-showMessage();
+setTimeout(() => {
+    showMessage();
+    setInterval(showMessage, 4000);
+}, 100000);
+
 
 // Sakura effect
 const canvas = document.getElementById('sakura');
@@ -116,4 +119,11 @@ window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     init();
+});
+const music = document.getElementById('bg-music');
+const overlay = document.getElementById('overlay');
+
+overlay.addEventListener('click', () => {
+  music.play();
+  overlay.style.display = 'none';
 });
