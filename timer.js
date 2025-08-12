@@ -63,7 +63,7 @@ function showMessage() {
 setTimeout(() => {
     showMessage();
     setInterval(showMessage, 4000);
-}, 100000);
+}, 50000);
 
 
 // Sakura effect
@@ -127,3 +127,4 @@ overlay.addEventListener('click', () => {
   music.play();
   overlay.style.display = 'none';
 });
+
